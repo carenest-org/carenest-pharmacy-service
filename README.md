@@ -104,3 +104,4 @@ docker run -p 3003:3003 --env-file .env carenest-pharmacy-service
 The Dockerfile uses a multi-stage build:
 1. **Builder stage**: `node:20-alpine` — installs production dependencies
 2. **Production stage**: `node:20-alpine` — runs as non-root `appuser`
+# trigger pipeline Sat Apr 25 10:53:04 UTC 2026
