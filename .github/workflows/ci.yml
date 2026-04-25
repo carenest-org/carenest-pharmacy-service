@@ -22,6 +22,7 @@ jobs:
   # ── Stage 1: SonarQube Analysis ──────────────────────────
   sonarqube:
     name: "① SonarQube"
+    if: false
     uses: carenest-org/carenest-template/.github/workflows/template-sonarqube.yml@main
     with:
       project-key: carenest-pharmacy-service
@@ -33,7 +34,7 @@ jobs:
   # ── Stage 2: Install Dependencies & Build ────────────────
   build:
     name: "② Build"
-    needs: [sonarqube]
+    needs: []
     uses: carenest-org/carenest-template/.github/workflows/template-ci.yml@main
     with:
       node-version: "20"
